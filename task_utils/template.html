@@ -1,0 +1,52 @@
+<html>
+<head>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+        body {
+            padding: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            text-align: right;
+        }
+        table tr {
+            border-bottom: 1px solid;
+            font-size: 10px;
+        }
+        table th, table td {
+            padding: 10px 20px;
+            font-size: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Big(O) Report for searching algorithms</h1>
+<h2>Summary</h2>
+<p>The tests were executed for {{algorithms}} algorithms. Each test was performed for {{runs_number}} times.</p>
+<p>The search was executed for two cases:</p>
+<ul>
+    <li>Patterns these are present in both texts</li>
+    <li>Patterns these are present neither in the first texts nor in the second one</li>
+</ul>
+<p>The results are presented in the table below and on the plot.</p>
+<h2>Results</h2>
+<h3>Table with average time</h3>
+<p>The table with average time of calculation for each algorithm per pattern length and pattern presence:</p>
+{{ my_table }}
+<h3>Plot</h3>
+<p>Time dependencies on pattern length for each algorithm:</p>
+<img src='plot.svg' width="1200">
+<h3>Conclusion</h3>
+<p>Based on the results, the following conclusions can be made:</p>
+<ul>
+    <li>Algorithm Booyer-Moore Search is the fastest for both texts.</li>
+    <li>Algorithm Rabin-Karp Search is the slowest for both texts.</li>
+    <li>Algorithm Knuth-Morris-Pratt Search is close enough to Booyer-Moore Search for small and big pattern length.</li>
+    <li>All algorithms are quite good for small pattern length.</li>
+    <li>The results are relevant both for the case when the pattern is present in the text and for the case when the pattern is absent </li>
+</ul>
+</body>
+</html>
